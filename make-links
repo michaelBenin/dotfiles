@@ -1,0 +1,53 @@
+#!/bin/bash
+
+things_to_link=(
+    .vim
+    .vimrc
+    .gitconfig
+    .screenrc
+    .tmux.conf
+    .zshrc
+)
+
+pushd $(dirname $0)
+here=$(pwd)
+popd
+
+pushd $HOME
+
+for thing in ${things_to_link[@]}; do
+    src="$here/$thing"
+    target="$HOME/$thing"
+
+    if [[ -h $target ]]; then
+        # A target link already exits...
+        link_target=$(readlink -f $target)
+
+        if [[ $src != $link_target ]]; then
+            # ...but doesn't go where we want it.
+            echo
+            echo "WARNING:"
+            echo "    We want to make a link"
+            echo "        $target -> $src"
+            echo "    ...but a link already exists to a different source"
+            echo "        $link_target"
+            echo "    We're skipping $thing."
+            echo
+        fi
+
+    elif [[ -e $target ]]; then
+        # There's a file or directory by that name already.
+        echo
+        echo "WARNING:"
+        echo "    We want to make a link"
+        echo "        $target -> $src"
+        echo "    ...but a file or directory by that name already exits."
+        echo
+
+    else
+        # Make a link.
+        ln -sf $src $target
+    fi
+done
+
+popd
