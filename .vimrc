@@ -157,7 +157,7 @@ sunmap e
 
 let g:NERDTreeDirArrows=0
 let NERDTreeCaseSensitiveSort=1
-let NERDTreeIgnore=['\.svn$', '\.git$']
+let NERDTreeIgnore=['\.svn$', '\.git$', '\.pyc$']
 let NERDTreeShowBookmarks=0
 let NERDChristmasTree=1
 let NERDTreeHighlightCursorline=1
