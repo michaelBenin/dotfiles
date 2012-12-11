@@ -1,0 +1,12 @@
+[user]
+  name = Mason Staugler
+  email = mstaugler@urbandaddy.com
+
+[color]
+  ui = auto
+
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  orphaned-commits = !git fsck --full --no-reflogs | grep commit
