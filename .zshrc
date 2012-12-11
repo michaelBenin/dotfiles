@@ -49,7 +49,7 @@ export EDITOR=vim
 export SVN_EDITOR=$EDITOR
 export XMLLINT_INDENT="    "
 export GREP_COLOR='1;32'
-export GIT_SSH="$HOME/.dotmason/git-ssh.sh"
+export GIT_SSH="$HOME/dotfiles/git-ssh.sh"
 
 
 
