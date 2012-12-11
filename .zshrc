@@ -1,3 +1,5 @@
+node=$(uname -n)
+
 # Terminal.
 # =========
 export LC_ALL="en_US.utf8"
@@ -28,6 +30,7 @@ case $(uname -n) in
     ;;
 esac
 PROMPT="
+
 %D{%F %T}, %(!.%F{black}%K{red}.)%n%(!.%f%k.)@%F{$host_color}%M%f, %B%F{white}%d%b
 ?%? %B>%b "
 
@@ -35,7 +38,11 @@ PROMPT="
 
 # Environment.
 # ============
-source /etc/bash_completion.d/virtualenvwrapper
+if [[ $node == "boudica" ]]; then
+    source /usr/bin/virtualenvwrapper.sh
+else
+  source /etc/bash_completion.d/virtualenvwrapper
+fi
 PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 export EDITOR=vim
