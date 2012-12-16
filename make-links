@@ -1,11 +1,12 @@
 #!/bin/bash
 
 things_to_link=(
-    .vim
-    .vimrc
     .gitconfig
     .screenrc
     .tmux.conf
+    .vim
+    .vimrc
+    .xsession
     .zshrc
 )
 
