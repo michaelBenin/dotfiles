@@ -64,7 +64,7 @@ alias lla="ll -A"
 alias fc-start='vboxmanage startvm "FC14 Sandbox" --type headless'
 alias fc-stop='ssh root@10.0.0.101 "halt -p"'
 alias fc-ssh='ssh root@10.0.0.101'
-alias tmux='TERM=screen-256color tmux'
+alias tmux='tmux -2'
 
 
 ssh-add-all() {
