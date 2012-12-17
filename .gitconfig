@@ -6,6 +6,8 @@
   ui = auto
 
 [alias]
+  # dl for 'download'. Is that a stupid name?
+  dl = fetch --all --prune
   co = checkout
   st = status
   br = branch
