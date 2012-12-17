@@ -92,7 +92,6 @@ call Reset_tabs()
 set t_Co=256
 syntax on
 let g:zenburn_high_Contrast = 1
-let g:zenburn_alternate_Visual = 1
 colorscheme zenburn
 set guioptions=aci
 set laststatus=2
