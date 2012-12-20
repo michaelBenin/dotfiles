@@ -12,3 +12,4 @@
   st = status
   br = branch
   orphaned-commits = !git fsck --full --no-reflogs | grep commit
+  updiff = "!git fetch --all --prune; git log --left-right ...@{u}"
