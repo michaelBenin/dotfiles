@@ -39,9 +39,9 @@ PROMPT="
 # Environment.
 # ============
 if [[ $node == "boudica" ]]; then
-    source /usr/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper.sh
 else
-  source /etc/bash_completion.d/virtualenvwrapper
+    source /etc/bash_completion.d/virtualenvwrapper
 fi
 PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
