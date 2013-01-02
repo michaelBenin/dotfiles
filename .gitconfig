@@ -13,3 +13,5 @@
   br = branch
   orphaned-commits = !git fsck --full --no-reflogs | grep commit
   updiff = "!git fetch --all --prune; git log --left-right ...@{u}"
+  push-test = push -n origin HEAD
+  push-hard = push origin HEAD
