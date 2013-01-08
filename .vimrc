@@ -131,7 +131,7 @@ autocmd BufRead *.haml set filetype=haml
 autocmd BufRead *.module,*.inc set filetype=php
 autocmd BufRead *.pp set filetype=ruby
 
-autocmd BufRead *.dtm set filetype=clojure
+autocmd BufRead *.dtm,*.cljs set filetype=clojure
 
 " Haml and Yaml are indented by two.
 autocmd BufEnter *.haml,*.yaml call Set_tabs(2, 1)
