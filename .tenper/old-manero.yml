@@ -1,0 +1,19 @@
+# Shows up in 'tmux list-sessions' and on the left side of the status bar.
+session name: old-manero
+
+# When starting a tenper session, all windows and panes will be changed to this
+# directory.
+project root: ~/code/urbandaddy/sites/manero
+
+windows:
+  - name: host
+    panes:
+      - fc-ssh
+
+  - name: editor
+    panes:
+      - vim
+
+  - name: shell
+    panes:
+      - ls
