@@ -168,6 +168,8 @@ nmap <LocalLeader>nt :NERDTreeToggle<CR>
 nnoremap <silent> <LocalLeader>tl :TlistToggle<CR>
 nmap <LocalLeader>ls :call BufferList()<CR>
 nmap <LocalLeader><LocalLeader> :!%<CR>
+nmap <LocalLeader>b a{%  %}hhi
+nmap <LocalLeader>v a{{  }}hhi
 
 
 
