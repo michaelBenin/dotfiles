@@ -136,6 +136,8 @@ autocmd BufRead *.dtm,*.cljs set filetype=clojure
 " Haml and Yaml are indented by two.
 autocmd BufEnter *.haml,*.yaml call Set_tabs(2, 1)
 autocmd BufLeave *.haml,*.yaml call Reset_tabs()
+autocmd BufEnter *.clj,*.dtm,*.cljs call Set_tabs(2, 1)
+autocmd BufLeave *.clj,*.dtm,*.cljs call Reset_tabs()
 autocmd BufEnter *.py call Set_tabs(4, 1)
 
 
