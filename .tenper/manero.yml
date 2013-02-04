@@ -15,8 +15,8 @@ windows:
   - name: server/repl
     layout: even-horizontal
     panes:
-      - ./manage.py runserver 8000
-      - ./manage.py shell
+      - DJANGO_SETTINGS_MODULE=manero.settings.local ./manage.py runserver 8000
+      - DJANGO_SETTINGS_MODULE=manero.settings.local ./manage.py shell
 
   - name: editor
     # Layout of the panes: even-horizontal, even-vertical, main-horizontal,
