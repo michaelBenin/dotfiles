@@ -45,6 +45,9 @@ else
 fi
 PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
+# Bullshit requirement from the frontend devs.
+PATH="$PATH:/usr/local/lib/node_modules/jetfuel/bin"
+
 export EDITOR=vim
 export SVN_EDITOR=$EDITOR
 export XMLLINT_INDENT="    "
