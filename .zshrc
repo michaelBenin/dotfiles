@@ -81,14 +81,6 @@ ssh-add-all() {
     done
 }
 
-alias fg="find-grep"
-find-grep() {
-    search=$1
-    shift
-
-    find . -path '*.git' -prune -o -path '*cache' -prune -o -type f $* -print0 | xargs -0 grep --color "$search"
-}
-
 cdn-assets() {
   local url
   local host
