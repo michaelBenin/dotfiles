@@ -19,11 +19,11 @@ compinit
 
 host_color="white"
 case $(uname -n) in
+  ip-*)
+    host_color="blue"
+    ;;
   inkling)
     host_color="magenta"
-    ;;
-  nutmeg)
-    host_color="blue"
     ;;
   boudica)
     host_color="red"
