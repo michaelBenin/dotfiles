@@ -97,6 +97,12 @@ cdn-assets() {
   echo $assets
 }
 
+export TENPER_VERBOSE="true"
+export TENPER_TMUX_COMMAND="tmux -2"
+if [[ -n "$TENPER_VIRTUALENV" ]] then
+  source $TENPER_VIRTUALENV
+fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
