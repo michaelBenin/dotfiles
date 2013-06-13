@@ -8,7 +8,6 @@ things_to_link=(
     .vimrc
     .xsession
     .zshrc
-    .tenper
 )
 
 pushd $(dirname $0)
