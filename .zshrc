@@ -20,12 +20,15 @@ compinit
 host_color="white"
 case $(uname -n) in
   ip-*)
-    host_color="blue"
+    host_color="magenta"
     ;;
   inkling)
     host_color="magenta"
     ;;
-  boudica)
+  develop*)
+    host_color="blue"
+    ;;
+  admin*)
     host_color="red"
     ;;
 esac
@@ -38,18 +41,9 @@ PROMPT="
 
 # Environment.
 # ============
-if [[ $node == "boudica" ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    source /etc/bash_completion.d/virtualenvwrapper
-fi
 PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
-# Bullshit requirement from the frontend devs.
-PATH="$PATH:/usr/local/lib/node_modules/jetfuel/bin"
-
 export EDITOR=vim
-export SVN_EDITOR=$EDITOR
 export XMLLINT_INDENT="    "
 export GREP_COLOR='1;32'
 export GIT_SSH="$HOME/dotfiles/git-ssh.sh"
@@ -63,23 +57,7 @@ alias lsnc="ls --color=never"
 alias ll="ls -lh"
 alias la="ls -A"
 alias lla="ll -A"
-
-alias fc-start='vboxmanage startvm "FC14 Sandbox" --type headless'
-alias fc-stop='ssh root@10.0.0.101 "halt -p"'
-alias fc-ssh='ssh root@10.0.0.101'
 alias tmux='tmux -2'
-
-
-ssh-add-all() {
-    keys=(
-        "$HOME/.ssh/mstaugler-ud"
-        "$HOME/.ssh/id_rsa"
-    )
-
-    for ii in ${keys[*]}; do
-        ssh-add $ii
-    done
-}
 
 cdn-assets() {
   local url
