@@ -95,7 +95,7 @@ let g:zenburn_high_Contrast = 1
 colorscheme zenburn
 set guioptions=aci
 set laststatus=2
-set statusline=#%n\ [%l/%L]x%c\ %y\ %t\ \(%F\)
+set statusline=%{fugitive#statusline()}\ [%l/%L]x%c\ %F
 set cursorline
 set wildmenu
 set list
